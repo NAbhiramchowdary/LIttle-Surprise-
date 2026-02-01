@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- Neutral WhatsApp preview -->
-<title>just little present for you</title>
-<meta property="og:title" content="just little present for you">
-<meta property="og:description" content="Just check this once 🙂">
+<!-- WhatsApp Preview -->
+<title>Just a Little Present for You 🎁</title>
+<meta property="og:title" content="Just a Little Present for You 🎁">
+<meta property="og:description" content="">
 <meta property="og:image" content="">
 
 <style>
@@ -121,12 +121,10 @@
   const music = document.getElementById("music");
   const sadMsg = document.getElementById("sadMsg");
 
-  // Play music on first interaction
   document.body.addEventListener("click", () => {
     music.play();
   }, { once: true });
 
-  // No button runs away + playful message
   function moveNo() {
     const rect = card.getBoundingClientRect();
     const x = Math.random() * (rect.width - noBtn.offsetWidth);
@@ -144,7 +142,6 @@
   noBtn.addEventListener("mouseover", moveNo);
   noBtn.addEventListener("touchstart", moveNo);
 
-  // Floating hearts
   function createHeart() {
     const heart = document.createElement("div");
     heart.className = "heart";
@@ -157,11 +154,10 @@
 
   setInterval(createHeart, 400);
 
-  // YES click final screen
   yesBtn.addEventListener("click", () => {
     card.innerHTML = `
       <h1>You are officially my Valentine 😍</h1>
-      <img src="https://media.giphy.com/media/26FLdmIp6wJr91JAI/giphy.gif" alt="Romantic">
+      <img src="https://media.giphy.com/media/26FLdmIp6wJr91JAI/giphy.gif">
       <p><b>I love you 💖</b></p>
       <p>
         Every love story is beautiful,<br>
